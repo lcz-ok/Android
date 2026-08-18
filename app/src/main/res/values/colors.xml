@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blue_primary">#007AFF</color>
+    <color name="blue_secondary">#5AC8FA</color>
+    <color name="dark_background">#0B0F19</color>
+    <color name="dark_surface">#151B2E</color>
+    <color name="dark_surface_variant">#1C2338</color>
+    <color name="card_blue">#1E2A50</color>
+    <color name="card_cyan">#0E3A3D</color>
+    <color name="card_purple">#2A1A4A</color>
+    <color name="card_green">#0E3D2E</color>
+    <color name="card_orange">#3D2B0E</color>
+    <color name="card_rose">#3D1A2C</color>
+</resources>

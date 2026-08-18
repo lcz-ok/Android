@@ -1,0 +1,45 @@
+# Gradle
+.gradle/
+build/
+
+# Android
+/local.properties
+app/build/
+*/build/
+*.apk
+*.aab
+*.ap_
+
+# Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+captures/
+.externalNativeBuild/
+.cxx/
+
+# Kotlin
+*.class
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+# Gradle Wrapper (optional - keep if you want to ship wrapper jar)
+# gradle/wrapper/gradle-wrapper.jar

@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">系统调试器</string>
+    <string name="auth_title">卡密认证</string>
+    <string name="auth_hint">请输入卡密</string>
+    <string name="auth_button">验证并进入</string>
+    <string name="auth_error">卡密错误，请重新输入</string>
+    <string name="auth_success">认证成功</string>
+    <string name="shizuku_not_running">Shizuku 未运行，请先开启 Shizuku 服务后重新打开应用</string>
+    <string name="shizuku_dialog_title">Shizuku 未就绪</string>
+    <string name="shizuku_dialog_positive">我已知晓</string>
+    <string name="app_freezer">应用冻结器</string>
+    <string name="privacy_shield">隐私盾</string>
+    <string name="file_explorer">文件探险家</string>
+    <string name="system_tuner">系统调谐器</string>
+    <string name="security_audit">安全审计</string>
+    <string name="automation">自动化场景</string>
+    <string name="help_title">功能说明</string>
+</resources>
