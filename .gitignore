@@ -6,7 +6,6 @@ build/
 /local.properties
 app/build/
 */build/
-*.apk
 *.aab
 *.ap_
 
