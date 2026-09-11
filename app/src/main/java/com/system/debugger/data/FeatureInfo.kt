@@ -65,6 +65,60 @@ object FeatureData {
             useCases = listOf("夜间自动冻结应用", "定时切换隐私模式", "基于位置的自动化"),
             icon = "auto_awesome",
             color = "#3D1A2C"
+        ),
+        FeatureInfo(
+            id = "deviceinfo",
+            name = "设备信息查看器",
+            description = "通过 Shell 命令获取系统级设备参数，显示完整的硬件、系统、CPU 和存储信息。",
+            requiredPermissions = listOf("Shizuku 权限", "DUMP"),
+            useCases = listOf("查看内核版本", "获取 CPU 架构", "检查安全补丁日期"),
+            icon = "info",
+            color = "#1A3A5C"
+        ),
+        FeatureInfo(
+            id = "notification",
+            name = "通知管理器",
+            description = "通过 appops 为每个应用单独开启或关闭通知权限，精确控制通知推送。",
+            requiredPermissions = listOf("Shizuku 权限", "QUERY_ALL_PACKAGES"),
+            useCases = listOf("禁用广告通知", "阻止后台通知", "精简通知栏"),
+            icon = "notifications",
+            color = "#3A2A1A"
+        ),
+        FeatureInfo(
+            id = "component",
+            name = "组件管理器",
+            description = "启用或禁用应用的具体组件（Activity、Service、Receiver），精确定位广告和自启行为。",
+            requiredPermissions = listOf("Shizuku 权限", "QUERY_ALL_PACKAGES"),
+            useCases = listOf("禁用广告组件", "阻止开机自启", "关闭后台服务"),
+            icon = "widgets",
+            color = "#2A1A3A"
+        ),
+        FeatureInfo(
+            id = "power",
+            name = "电源控制",
+            description = "通过 Shell 执行系统级电源操作：快速重启、恢复模式、引导模式、关机、飞行模式。",
+            requiredPermissions = listOf("Shizuku 权限", "WRITE_SECURE_SETTINGS"),
+            useCases = listOf("一键重启", "进入 Recovery", "切换飞行模式"),
+            icon = "power",
+            color = "#3D1A1A"
+        ),
+        FeatureInfo(
+            id = "network",
+            name = "网络管理器",
+            description = "通过 appops 为每个应用单独控制网络访问权限，一键断网或恢复联网。",
+            requiredPermissions = listOf("Shizuku 权限", "QUERY_ALL_PACKAGES"),
+            useCases = listOf("禁止应用联网", "阻止后台上传", "限制流量消耗"),
+            icon = "network",
+            color = "#0E3A5C"
+        ),
+        FeatureInfo(
+            id = "battery",
+            name = "电池优化管理",
+            description = "管理应用电池优化白名单，控制后台运行策略，精准优化电池续航。",
+            requiredPermissions = listOf("Shizuku 权限", "REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"),
+            useCases = listOf("添加白名单", "优化后台耗电", "延长续航时间"),
+            icon = "battery",
+            color = "#0E3D2E"
         )
     )
 

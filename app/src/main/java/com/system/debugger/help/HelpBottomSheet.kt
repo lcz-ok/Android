@@ -17,14 +17,20 @@ import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.BatteryChargingFull
 import androidx.compose.material.icons.filled.Block
 import androidx.compose.material.icons.filled.Build
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Folder
+import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.Lock
+import androidx.compose.material.icons.filled.NetworkCheck
+import androidx.compose.material.icons.filled.Notifications
+import androidx.compose.material.icons.filled.PowerSettingsNew
 import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.filled.VerifiedUser
+import androidx.compose.material.icons.filled.Widgets
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.Divider
@@ -212,6 +218,12 @@ private fun getFeatureIcon(id: String): ImageVector {
         "tuner" -> Icons.Default.Settings
         "audit" -> Icons.Default.VerifiedUser
         "automation" -> Icons.Default.Build
+        "deviceinfo" -> Icons.Default.Info
+        "notification" -> Icons.Default.Notifications
+        "component" -> Icons.Default.Widgets
+        "power" -> Icons.Default.PowerSettingsNew
+        "network" -> Icons.Default.NetworkCheck
+        "battery" -> Icons.Default.BatteryChargingFull
         else -> Icons.Default.Star
     }
 }

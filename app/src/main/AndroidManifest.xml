@@ -67,6 +67,36 @@
             android:exported="false"
             android:theme="@style/Theme.SystemDebugger" />
 
+        <activity
+            android:name=".feature.DeviceInfoActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SystemDebugger" />
+
+        <activity
+            android:name=".feature.NotificationManagerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SystemDebugger" />
+
+        <activity
+            android:name=".feature.ComponentManagerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SystemDebugger" />
+
+        <activity
+            android:name=".feature.PowerControlActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SystemDebugger" />
+
+        <activity
+            android:name=".feature.NetworkManagerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SystemDebugger" />
+
+        <activity
+            android:name=".feature.BatteryOptimizerActivity"
+            android:exported="false"
+            android:theme="@style/Theme.SystemDebugger" />
+
         <provider
             android:name="rikka.shizuku.ShizukuProvider"
             android:authorities="${applicationId}.shizuku"

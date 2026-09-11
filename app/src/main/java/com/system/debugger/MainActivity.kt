@@ -16,6 +16,8 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
@@ -138,7 +140,29 @@ fun MainScreen(
 
             Spacer(modifier = Modifier.height(20.dp))
 
-            FeatureGrid(onFeatureClick = onFeatureClick)
+            LazyColumn(
+                verticalArrangement = Arrangement.spacedBy(14.dp),
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                items(FeatureData.features.chunked(3)) { rowFeatures ->
+                    Row(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalArrangement = Arrangement.spacedBy(14.dp)
+                    ) {
+                        for (i in 0 until 3) {
+                            if (i < rowFeatures.size) {
+                                FeatureCard(
+                                    feature = rowFeatures[i],
+                                    onClick = { onFeatureClick(rowFeatures[i].id) },
+                                    modifier = Modifier.weight(1f)
+                                )
+                            } else {
+                                Spacer(modifier = Modifier.weight(1f))
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         FloatingHelpButton(
@@ -151,33 +175,6 @@ fun MainScreen(
 
         if (showHelp) {
             HelpBottomSheet(onDismiss = { showHelp = false })
-        }
-    }
-}
-
-@Composable
-private fun FeatureGrid(onFeatureClick: (String) -> Unit) {
-    val features = FeatureData.features
-
-    Column(
-        verticalArrangement = Arrangement.spacedBy(14.dp)
-    ) {
-        for (rowIndex in 0 until 2) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(14.dp)
-            ) {
-                for (colIndex in 0 until 3) {
-                    val index = rowIndex * 3 + colIndex
-                    if (index < features.size) {
-                        FeatureCard(
-                            feature = features[index],
-                            onClick = { onFeatureClick(features[index].id) },
-                            modifier = Modifier.weight(1f)
-                        )
-                    }
-                }
-            }
         }
     }
 }
@@ -267,6 +264,12 @@ private fun getIconForFeature(id: String): ImageVector {
         "tuner" -> Icons.Default.Settings
         "audit" -> Icons.Default.VerifiedUser
         "automation" -> Icons.Default.Build
+        "deviceinfo" -> Icons.Default.Info
+        "notification" -> Icons.Default.Notifications
+        "component" -> Icons.Default.Widgets
+        "power" -> Icons.Default.PowerSettingsNew
+        "network" -> Icons.Default.NetworkCheck
+        "battery" -> Icons.Default.BatteryChargingFull
         else -> Icons.Default.Star
     }
 }

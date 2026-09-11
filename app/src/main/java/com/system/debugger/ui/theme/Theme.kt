@@ -72,7 +72,13 @@ val CardColors = mapOf(
     "file" to Color(0xFF2A1A4A),
     "tuner" to Color(0xFF0E3D2E),
     "audit" to Color(0xFF3D2B0E),
-    "automation" to Color(0xFF3D1A2C)
+    "automation" to Color(0xFF3D1A2C),
+    "deviceinfo" to Color(0xFF1A3A5C),
+    "notification" to Color(0xFF3A2A1A),
+    "component" to Color(0xFF2A1A3A),
+    "power" to Color(0xFF3D1A1A),
+    "network" to Color(0xFF0E3A5C),
+    "battery" to Color(0xFF0E3D2E)
 )
 
 fun getCardColor(id: String): Color = CardColors[id] ?: Color(0xFF1E2A50)
